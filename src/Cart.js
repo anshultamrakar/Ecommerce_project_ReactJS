@@ -32,7 +32,7 @@ const Cart = () => {
               }
           </ul>
           </section>
-          { <Pricing/> && <p>Cart is Empty </p>}
+          <Pricing/>
           
         </main >
     )

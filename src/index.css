@@ -247,25 +247,15 @@ form{
 .cart{
   display:grid;
   grid-template-columns: 2fr 1fr;
-  
 }
 
-.vl {
-  border-left: 2px solid black;
-  height: 800px;
-  position: absolute;
-  left: 60%;
-  margin-left: -3px;
-  margin-top: 1rem;
-
+.cart_pricing{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 
-.pricing{
-  position: relative;
-right: -100px;
-  margin-top: 6rem;
-  min-width: 45%;
-}
 
 
 
