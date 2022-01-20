@@ -1,6 +1,7 @@
 import { BiCartAlt } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsFillHouseDoorFill} from "react-icons/bs";
+import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useContext } from "react"
 import DataContext from './Context/DataContext'
@@ -22,6 +23,8 @@ const Nav = () => {
                    <li><Link to = ""><BsFillHouseDoorFill/> </Link></li>
                    <li> <Link to = "cart"> <BiCartAlt/> </Link>  <span className="notify">{cartItems.length}</span> </li>
                    <li> <Link to = "wishlist"> <AiOutlineHeart/>  </Link> <span className="notify">{wishItems.length}</span></li>
+                   <li><Link to = "login"><FaUser/> </Link></li>
+                 
                </ul>
            </form>
         </nav>

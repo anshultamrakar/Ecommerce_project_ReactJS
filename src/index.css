@@ -68,7 +68,7 @@ main{
 
 
 .searchForm {
-  width: 40%;
+  width: 55%;
   padding: 1rem 0 0 0.75rem;
 }
 
@@ -219,9 +219,6 @@ form{
 }
 
 
-/* .wishItems li button{
-  width: 100%;
-} */
 
 .wishCount{
   text-align: center;
@@ -255,6 +252,12 @@ form{
   justify-content: center;
   gap: 10px;
 }
+
+.userLogin{
+ font-size: 2rem;
+  align-items: flex-end;
+}
+
 
 
 
