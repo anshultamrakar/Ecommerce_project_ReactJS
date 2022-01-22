@@ -17,13 +17,13 @@ const Cart = () => {
                         <img src={item.imgUrl}></img>
                         <p> {item.item}</p>
                         <p> {item.description}</p>
-                        <p> {item.price} <small style = {{ textDecoration :"line-through"}}>Rs.1200</small>
+                        <p> Rs {item.price} <small style = {{ textDecoration :"line-through"}}>Rs.1200</small>
                         <br/>
                         <i style = {{color : "red"}}> (50% OFF)</i> </p>
                         <div className="cart_btn">
                         <button onClick={() => incrementQty(item.id)} >+</button> 
                         <p>Qty : {item.quantity}</p>
-                        <button onClick={() => decrementQty(item.id)}>-</button> 
+                        <button disabled = {item.quantity === 1 } onClick={() => decrementQty(item.id)}>-</button> 
                         </div>
                         <hr/>
                         <button className="cart_btn"  onClick={() => removeCartItems(item.id)}> Remove </button>

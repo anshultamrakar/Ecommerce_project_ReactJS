@@ -7,6 +7,8 @@ const Pricing = () => {
 
   const finalPrice = cartItems.map((item) => item.price)
   const totalPrice = finalPrice.reduce((acc , value) => acc + value )
+  console.log(finalPrice)
+  console.log(totalPrice)
  
    
     return (
@@ -14,10 +16,11 @@ const Pricing = () => {
           
           <h1>Card Details</h1>
             <p> Total quantity : {cartItems.length} </p>
-            <p> Total Price : Rs. {totalPrice} </p>
-            <button> Proceed to buy</button>
+            <p> Price : Rs. {totalPrice} </p>
+            <p> Discount : Rs. - 40 </p>
         
-           
+
+            <button> Proceed to buy</button>
         </div>
         
     )

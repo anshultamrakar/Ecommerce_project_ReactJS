@@ -14,7 +14,7 @@ const Wishlist = () => {
                         <button className="cross_btn" onClick={() => removeWishItems(item.id)}> x </button>
                         <img alt = "product-image" src={item.imgUrl} ></img>
                         <p> {item.description}</p>
-                        <p> {item.price} <small style = {{ textDecoration :"line-through"}}>Rs.1200</small>
+                        <p> Rs {item.price} <small style = {{ textDecoration :"line-through"}}>Rs.1200</small>
                         <br/>
                         <i style = {{color : "red"}}> (50% OFF)</i> </p>
                         <button className="cart_btn" onClick={() => handleCartItems(item)} > 👜 Move to cart </button>

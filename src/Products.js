@@ -12,7 +12,7 @@ const {searchResults , handleWishItems } = useContext(DataContext)
                      <img src = {item.imgUrl} alt="image" ></img>
                      <p>{item.item}</p>
                      <p> {item.description}</p>
-                     <p>{item.price} <small style = {{ textDecoration :"line-through"}}>Rs.1200</small>
+                     <p> Rs.{item.price} <small style = {{ textDecoration :"line-through"}}>Rs.1200</small>
                      <br/>
                       <i style = {{color : "red"}}> (50% OFF)</i></p>
                      <button className="wish_btn" onClick={() => handleWishItems(item)} > 💙 Add to wishlist</button>
