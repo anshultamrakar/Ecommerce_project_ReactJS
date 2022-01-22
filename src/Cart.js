@@ -5,7 +5,8 @@ import DataContext from './Context/DataContext'
 const Cart = () => {
 
     const {cartItems, removeCartItems, incrementQty , decrementQty} = useContext(DataContext)
-
+      
+   
     return (
         <main className = "cart">
           <section>

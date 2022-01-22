@@ -124,7 +124,7 @@ export const DataProvider = ({children}) => {
     
     
     const incrementQty = (id) => {
-      const incrementValue = cartItems.map((item) => item.id === id ? {...item, quantity: item.quantity+1 } : item )
+      const incrementValue = cartItems.map((item) => item.id === id ? {...item, quantity: item.quantity + 1 } : item )
       setCartItems(incrementValue)
      }
      

@@ -4,20 +4,25 @@ import DataContext from "./Context/DataContext"
 const Pricing = () => {    
   const {cartItems} = useContext(DataContext)
 
+  const totalPrice = () => {
+    let sumPrice = 0 ;
+    cartItems.forEach((item) => {
+      sumPrice += item.price * item.quantity
+    })
+    return sumPrice;
+  }
 
-  const finalPrice = cartItems.map((item) => item.price)
-  const totalPrice = finalPrice.reduce((acc , value) => acc + value )
-  console.log(finalPrice)
-  console.log(totalPrice)
- 
+  const totalQuantity = cartItems.reduce((acc , value) => acc + value.quantity , 0)
+
+
    
     return (
         <div className="cart_pricing" >
           
           <h1>Card Details</h1>
-            <p> Total quantity : {cartItems.length} </p>
-            <p> Price : Rs. {totalPrice} </p>
-            <p> Discount : Rs. - 40 </p>
+            <p> Total quantity : {totalQuantity} </p>
+            <p> Price : Rs. {totalPrice()} </p>
+      
         
 
             <button> Proceed to buy</button>
