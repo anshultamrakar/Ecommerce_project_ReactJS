@@ -23,8 +23,7 @@ const Pricing = () => {
             <p> Total quantity : {totalQuantity} </p>
             <p> Price : Rs. {totalPrice()} </p>
       
-        
-
+      
             <button> Proceed to buy</button>
         </div>
         
