@@ -23,8 +23,8 @@ function App() {
           <Route path = "/" element = {<Products/>}/>
           <Route path = "cart" element = {<Cart/>}/>
           <Route path = "wishlist" element = {<Wishlist/>}/>
-    <Route path = "login" element = {<Login/>}/>
-         <Route path = "address" element = {<Address/>}/>
+           <Route path = "login" element = {<Login/>}/>
+            <Route path = "address" element = {<Address/>}/>
         </Routes>
         <Footer/>
     </DataProvider>
