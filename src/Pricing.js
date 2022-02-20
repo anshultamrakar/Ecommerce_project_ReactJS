@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 import DataContext from "./Context/DataContext"
 
 const Pricing = () => {    
@@ -22,9 +23,12 @@ const Pricing = () => {
           <h1>Card Details</h1>
             <p> Total quantity : {totalQuantity} </p>
             <p> Price : Rs. {totalPrice()} </p>
-      
-      
-            <button> Proceed to buy</button>
+            <a href='address'>
+              <button>
+              Proceed to buy
+          </button>
+          </a>
+
         </div>
         
     )

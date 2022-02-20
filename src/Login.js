@@ -1,34 +1,57 @@
-
-import { useContext } from "react"
+import { useContext, useState } from "react"
+import { Link } from "react-router-dom";
 import DataContext from './Context/DataContext'
 import { auth } from "./firebase";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+  
 
 const Login = () => {
-    const { login } = useContext(DataContext) 
 
-  const SignUpWithCredentials = () => {
+  const [LoginEmail, setLoginEmail] = useState("");
+  const [LoginPassword, setLoginPassword] = useState("");
+  
+  const { login } = useContext(DataContext) 
 
-    console.log("Under SignUP")
-    auth.createUserWithEmailAndPassword("tamrakardivyansh189@gmail.com", "Developer@324")
+  const LoginpWithCredentials = () => {
+
+    auth.signInWithEmailAndPassword(LoginEmail, LoginPassword)
     .then((userCredential) => {
+
+      console.log(userCredential)
       // Signed in 
       var user = userCredential.user;
-      console.log(user)
+      toast.success("User login Successfull!")
       // ...
     })
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
-      console.log(error);
+      toast.error(error.message)
+      
       // ..
     });
   
   }
     return(
-        <div>
-        <button onClick={()=>SignUpWithCredentials()}>
+        <div className="register">
+        <h3> Login User </h3>
+        <input
+          placeholder="Email..."
+          onChange={(e) => setLoginEmail(e.target.value)}
+        />
+        <br/>
+        <input
+          placeholder="Password..."
+          onChange={(e) => setLoginPassword(e.target.value)}
+        />
+         <br/>
+        <button onClick={(e)=>LoginpWithCredentials()}>
             SigUp
         </button>
+       
+      
+        <ToastContainer />
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import {createContext , useState , useEffect} from 'react'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const DataContext = createContext({})
 
@@ -91,6 +92,7 @@ export const DataProvider = ({children}) => {
     ])
     
     const [wishItems , setWishItems] = useState([])
+
     const [cartItems, setCartItems] = useState([])
     const [search , setSearch] = useState("")
     const [searchResults , setSearchResults] = useState([])
@@ -103,11 +105,25 @@ export const DataProvider = ({children}) => {
     
     
     const handleWishItems = (item) => {
-      setWishItems([...wishItems , item ]) 
+      if(wishItems.includes(item)){
+        toast.error("Item is already added to wishList")
+      }else{
+        setWishItems([...wishItems , item]) 
+      }
+        
     }
     
     const handleCartItems = (item) => {
-      setCartItems([...cartItems , item ]) 
+      if(cartItems.includes(item)){
+        toast.error('Item is already added to Cart')
+      }else{
+
+        setCartItems([...cartItems , item ]) 
+        const filteredWishList = wishItems.filter((i) => i.id !== item.id)
+        setWishItems(filteredWishList)
+
+      }
+     
     }
      
     

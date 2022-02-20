@@ -259,6 +259,29 @@ form{
 }
 
 
+.register{
+  margin-top: 4rem;
+  padding: 1rem 1rem 1rem 1rem ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+}
+.loginForm{
+  margin-top: 4rem;
+  padding: 1rem 1rem 1rem 1rem ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.addForm{
+  
+}
+
 
 
 
