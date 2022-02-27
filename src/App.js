@@ -5,7 +5,7 @@ import Cart from "./Cart";
 import Wishlist from "./Wishlist";
 import Login from "./Login";
 import Register from "./Register"
-import Address from "./PrivateRoute/Address";
+// import Address from "./PrivateRoute/Address";
 import Footer from "./Footer";
 import {Route , Routes } from 'react-router-dom'
 import {DataProvider} from "./Context/DataContext"
@@ -29,8 +29,7 @@ function App() {
           <Route path = "wishlist" element = {<Wishlist/>}/>
            <Route path = "login" element = {<Login/>}/>
            <Route path = "register" element = {<Register/>}/>
-           <Route path = "address" element = {<Address/>}/>
-         
+           {/* <Route path = "address" element = {<Address/>}/> */}
         </Routes>
         <Footer/>
     </DataProvider>
